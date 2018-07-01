@@ -24,7 +24,11 @@ hbs.registerPartials(__dirname + '/app-views');
 hbs.registerHelper('getCurrentYear', () => {
     var d = new Date();
     return d.getFullYear();
-})
+});
+
+hbs.registerHelper('toupper', (text) => {
+    return text.toUpperCase();
+});
 
 app.get('/', (req, res) => {
   res.render('home.hbs', {
